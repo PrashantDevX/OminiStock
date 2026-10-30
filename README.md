@@ -29,8 +29,10 @@ reservation. Inventory exposes low-stock records for replenishment monitoring.
 Each domain service owns a separate PostgreSQL database. The application uses
 the four existing local databases by default: `omnistock_auth`,
 `omnistock_product`, `omnistock_inventory`, and `omnistock_order`. Tests use
-separate in-memory H2 databases. Application startup does not create demo users,
-products, warehouses, stock, or orders.
+separate in-memory H2 databases. Application startup does not create users or
+sample records. The local review databases currently contain three example
+products, two warehouses, and four inventory entries, added explicitly for
+the frontend walkthrough.
 
 ## Run locally
 
