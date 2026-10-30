@@ -41,9 +41,18 @@ Prerequisites: Java 17 or newer, Maven, and Node.js/npm.
 From the repository root in PowerShell:
 
 ```powershell
+.\scripts\setup-databases.ps1
 npm --prefix frontend ci
 .\scripts\start-all.ps1
 ```
+
+The database setup script creates the four PostgreSQL databases if needed,
+creates tables matching the service entities, and inserts the review products,
+warehouses, and stock only when they are missing. It does not drop databases,
+overwrite existing records, create sample orders, or create accounts. Set
+`DB_USER` and `DB_PASSWORD` in the environment first if your PostgreSQL
+credentials differ from the local defaults; you can also provide `-DbHost` and
+`-DbPort` to the script.
 
 The startup script builds and launches Eureka, Auth, the Gateway, Product,
 Inventory (two instances), Order, and the Vite frontend. Open
