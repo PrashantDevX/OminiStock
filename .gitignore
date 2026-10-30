@@ -1,0 +1,33 @@
+# Java / Maven
+**/target/
+**/build/
+*.class
+
+# Frontend
+/frontend/node_modules/
+/frontend/dist/
+/frontend/coverage/
+
+# Local logs and runtime files
+/logs/
+*.log
+*.pid
+
+# IDE and operating system files
+/.metadata/
+/.project
+/.classpath
+/.settings/
+/.vscode/
+/.idea/
+*.iml
+*.ipr
+*.iws
+/bin/
+.DS_Store
+Thumbs.db
+
+# Local environment and secrets
+**/.env
+**/.env.*
+!**/.env.example
