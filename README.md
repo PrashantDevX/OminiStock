@@ -108,6 +108,9 @@ and are blocked at the public Gateway.
 The frontend API base URL can be changed with `frontend/.env` using
 `VITE_API_URL` (see `frontend/.env.example`). Auth Service and API Gateway must
 use the same `JWT_SECRET`; they also support `EUREKA_URL` for the registry URL.
+Local services register as `localhost` with Eureka by default. Set
+`EUREKA_HOSTNAME` to a reachable hostname when running services on separate
+machines.
 Set `DB_USER`, `DB_PASSWORD`, and `JWT_SECRET` in the environment before
 starting the services. `DB_PASSWORD` must match the password configured for
 your PostgreSQL user, and the same JWT secret is used by Auth Service and the
